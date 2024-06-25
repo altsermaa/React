@@ -1,19 +1,24 @@
 import React from 'react'
 import Titles from './Titles'
-import TechIcon from './TechIcon'
+import {TechIcon} from '../assets/TechIcon'
 
-function Section3Skill() {
+export const Skills = () => {
+  const arr = new Array(16).fill(0);
   return (
     <div className="bg-[#030712] text-white w-screen h-auto">
         <div className='py-24 px-20'> 
-          <Titles sections="Skills"/>
-          <p className='text-center mt-4'>The skills, tools and technologies I am really good at:</p>
-          <TechIcon />
-
-        </div>
+          <div>
+            <Titles sections="Skills"/>
+            <p className='text-center mt-4 mb-12'>The skills, tools and technologies I am really good at:</p>
+          </div>
+          <div className='flex flex-wrap m-auto lg:w-[1216px] gap-16'>
+            {arr.map((item) => (
+              <TechIcon />
+            ))}
+          </div>
+        </div>  
     </div>
-  )
-}
+  );
+};
 
-export default Section3Skill
 
