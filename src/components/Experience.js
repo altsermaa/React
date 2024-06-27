@@ -4,10 +4,10 @@ import Details from './Details';
 import { GoDotFill } from "react-icons/go";
 
 
-function Experience() {
+function Experience({toggleDarkMode}) {
   return (
     <div className='flex flex-col m-auto p-8 gap-12 w-fit'>
-        <div className='flex m-auto p-8 bg-[#1f2937] rounded-lg gap-12 w-fit lg:flex-row flex-col'>
+        <div toggleDarkMode={toggleDarkMode} className='flex m-auto p-8 dark:bg-[#1f2937] dark:text-white bg-[#fff] text-black rounded-lg gap-12 w-fit lg:flex-row flex-col'>
             <div className='flex-1'>
                 <LogoUpwork />
             </div>
@@ -24,7 +24,7 @@ function Experience() {
                 <h4>Nov 2021 - Present</h4>
             </div>
         </div>
-        <div className='flex m-auto p-8 bg-[#1f2937] rounded-lg gap-12 w-fit lg:flex-row flex-col'>
+        <div toggleDarkMode={toggleDarkMode} className='flex m-auto p-8 dark:bg-[#1f2937] dark:text-white bg-[#fff] text-black rounded-lg gap-12 w-fit lg:flex-row flex-col'>
             <div className='flex-1'>
                 <LogoUpwork />
             </div>
@@ -41,7 +41,7 @@ function Experience() {
                 <h4>Nov 2021 - Present</h4>
             </div>
         </div>
-        <div className='flex m-auto p-8 bg-[#1f2937] rounded-lg gap-12 w-fit lg:flex-row flex-col'>
+        <div toggleDarkMode={toggleDarkMode} className='flex m-auto p-8 dark:bg-[#1f2937] dark:text-white bg-[#fff] text-black rounded-lg gap-12 w-fit lg:flex-row flex-col'>
             <div className='flex-1'>
                 <LogoUpwork />
             </div>

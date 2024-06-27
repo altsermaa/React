@@ -6,9 +6,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import Icons from './Icons';
 
-function Section6Contact() {
+function Section6Contact({toggleDarkMode}) {
   return (
-    <div className="bg-[#030712] text-white w-screen h-auto flex justify-center">
+    <div toggleDarkMode={toggleDarkMode} className="dark:bg-[#030712] dark:text-white bg-[#fff] text-black w-screen h-auto flex justify-center">
         <div className='py-24 px-20'> 
           <div>
             <Titles sections="Get in touch"/>
@@ -16,8 +16,8 @@ function Section6Contact() {
             <Contact icon={<MdOutlineEmail style={{fontSize: '32px'}}/>} text={<span style={{fontSize: '36px'}}>tom@pinecone.mn</span>} picture={<LogoContact />}/>
             <Contact icon={<FiPhoneCall style={{fontSize: '32px'}}/>} text={<span style={{fontSize: '36px' }}>+976 88112233</span>} picture={<LogoContact />}/>
             <p className='text-center mt-4 mb-12'>You may also find me on these platforms!</p>
-            <div className='flex justify-center'>
-              <Icons style={{ display: 'flex', justifyContent: 'center', width: '100%' }} />
+            <div>
+              <Icons/>
             </div>
         </div> 
         </div>  

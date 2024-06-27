@@ -33,12 +33,12 @@ const data = [
     },
 ];
 
-function Software() {
+function Software({toggleDarkMode}) {
     return (
         <div className='py-1 px-5 flex flex-wrap'>
             {
                 data.map(({ title }, index) => (
-                    <div key={index} className='m-2 p-2 bg-[#374151] text-[#d1d5db] rounded'>
+                    <div key={index} toggleDarkMode={toggleDarkMode} className='m-2 p-2 bg-[#e6e7eb] dark:bg-[#374151] text-[#b3b7bf] rounded-lg'>
                         {title}
                     </div>
                 ))

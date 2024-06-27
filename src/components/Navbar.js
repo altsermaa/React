@@ -2,12 +2,13 @@ import React from 'react';
 import { BsMoonStars } from "react-icons/bs";
 import Button from './Button';
 import { IoMenu } from "react-icons/io5";
+import { IoSunnyOutline } from "react-icons/io5";
 
 
-function Navbar({isDark, handleClick}) {
+function Navbar({ isDark, toggleDarkMode }) {
 
-  return (
-    <div className={isDark ? "dark" : ""}>
+
+    return (
         <div className='m-auto lg:py-4 lg:px-20 p-4'>
             <div className='flex justify-between m-auto items-center lg:w-[1280px] w-[343px] '>
                 <h1>TOM</h1>
@@ -18,16 +19,18 @@ function Navbar({isDark, handleClick}) {
                         <h3>Skills</h3>
                         <h3>Contact</h3>
                     </div>
-                    <BsMoonStars />
-                    <Button onClick={handleClick} />
+                    <button onClick={toggleDarkMode}>
+                        {isDark ? <BsMoonStars/> : <IoSunnyOutline/>}
+                    </button>
+                    <Button />
                 </div>
                 <div className='lg:hidden sm:contents'>
                     <IoMenu />
                 </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Navbar;
+

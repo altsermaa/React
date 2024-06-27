@@ -12,7 +12,7 @@ function Icons({icon}) {
     ] 
 
   return (
-    <div className='flex gap-1.5 size-6 mt-12'>
+    <div className='flex gap-1.5 size-6 mt-12 text-3xl'>
       {icons.map((icon, index) => (
         <div key={index}>{icon}</div>
       ))}
