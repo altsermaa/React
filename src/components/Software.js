@@ -35,7 +35,7 @@ const data = [
 
 function Software({toggleDarkMode}) {
     return (
-        <div className='py-1 px-5 flex flex-wrap'>
+        <div className='lg:py-1 lg:px-5 flex flex-wrap'>
             {
                 data.map(({ title }, index) => (
                     <div key={index} toggleDarkMode={toggleDarkMode} className='m-2 p-2 bg-[#e6e7eb] dark:bg-[#374151] text-[#b3b7bf] rounded-lg'>

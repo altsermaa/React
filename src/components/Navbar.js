@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsMoonStars } from "react-icons/bs";
 import Button from './Button';
 import { IoMenu } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
+import Drawer from './Drawer';
 
 
 function Navbar({ isDark, toggleDarkMode }) {
+    const [isOpen, setOpen] = useState(false);
 
+    const handleDrawer = () => {
+        setOpen(!isOpen)
+    }
 
     return (
         <div className='m-auto lg:py-4 lg:px-20 p-4'>
@@ -22,12 +27,14 @@ function Navbar({ isDark, toggleDarkMode }) {
                     <button onClick={toggleDarkMode}>
                         {isDark ? <BsMoonStars/> : <IoSunnyOutline/>}
                     </button>
-                    <Button />
+                    <Button className="text-center"/>
                 </div>
                 <div className='lg:hidden sm:contents'>
-                    <IoMenu />
+                    <IoMenu onClick={handleDrawer} color={isDark ? "#fff" : "#000"} size={24}/>
                 </div>
             </div>
+            <Drawer isOpen={isOpen} closeDrawer={handleDrawer} toggleDarkMode={toggleDarkMode} isDark={isDark}/>
+
         </div>
     )
 }

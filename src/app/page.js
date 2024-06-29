@@ -8,9 +8,7 @@ import { Skills } from "@/components/Section3Skill"
 import Section4Experience from "@/components/Section4Experience";
 import Section5Work from "@/components/Section5Work";
 import Section6Contact from "@/components/Section6Contact";
-import Section7Footer from "@/components/Section7Footer";
-import Navbar from '@/components/Navbar';
-import Button from '@/components/Button';
+import Section7Footer from "@/components/Section7Footer"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);

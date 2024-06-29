@@ -13,7 +13,7 @@ function WorkDetails({toggleDarkMode}) {
             <div className='lg:flex-1 lg:flex-1-none flex-2 p-12 dark:bg-[#1f2937] dark:text-white bg-[#fff] text-black flex flex-col gap-6'>
                 <h3>UBCab</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                <Software toggleDarkMode={toggleDarkMode}/>
+                <Software toggleDarkMode={toggleDarkMode}/> 
             </div>
         </div>
         <div className='flex lg:flex-row-reverse flex-col'>
