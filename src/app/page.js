@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from "next/image";
+import React, { useState } from 'react'; 
+import Image from "next/image"; 
 import Section1Hi from "@/components/Section1Hi.js";
 import Section2About from "@/components/Section2About";
 import { Skills } from "@/components/Section3Skill"
